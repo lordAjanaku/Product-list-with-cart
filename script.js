@@ -168,7 +168,7 @@ cart.addEventListener("click", (e) => {
       .map((item) => {
         return `
         <li class="checkout__product">
-          <img src="./assets/images/image-${item.category.toLowerCase().split(" ").join("-")}-thumbnail.jpg" alt="" />
+          <img src="./assets/images/image-${item.category.split(" ").join("-")}-thumbnail.jpg" alt="" />
           <div class="checkout__product-details">
             <p class="checkout__product-name">${item.name}</p>
             <p class="checkout__product-price-per-unit"><span class="unit">${item.unit}x</span> @$${item.price}</p>
@@ -327,7 +327,7 @@ function updateCheckout(products) {
     .map((item) => {
       return `
         <li class="checkout__product">
-          <img src="./assets/images/image-${item.category.split(" ").join("-")}-thumbnail.jpg" alt="" />
+          <img src="./assets/images/image-${item.category.toLowerCase().split(" ").join("-")}-thumbnail.jpg" alt="" />
           <div class="checkout__product-details">
             <p class="checkout__product-name">${item.name}</p>
             <p class="checkout__product-price-per-unit"><span class="unit">${item.unit}x</span> @$${item.price}</p>
