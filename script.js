@@ -325,6 +325,7 @@ function updateCart(products) {
 function updateCheckout(products) {
   const cartHTML = products
     .map((item) => {
+      console.log(item.category.toLowerCase().split(" ").join("-"));
       return `
         <li class="checkout__product">
           <img src="./assets/images/image-${item.category.toLowerCase().split(" ").join("-")}-thumbnail.jpg" alt="" />
